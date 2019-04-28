@@ -68,7 +68,7 @@ public class AI {
         for (int ci = 0; ci < this.conditions.size(); ci++) {
             ICondition condition = this.conditions.get(ci);
 
-            if (x + condition.getSize().first < field.size() && y + condition.getSize().second < field.size()) {
+            if (x + condition.getSize().second - 1 < field.size() && y + condition.getSize().first - 1 < field.size()) {
                 if (this.isMaskCondition(condition, field, x, y)) {
                     System.out.println(condition.getClass().getCanonicalName());
                     result.addAll(this.processSteps(condition.getStep(), x, y));
