@@ -14,11 +14,22 @@ public class GameMenu extends AppCompatActivity {
         setContentView(R.layout.activity_game_menu);
 
         Button startAi = findViewById(R.id.start_ai);
+        Button startPvP = findViewById(R.id.start_pvsp);
+
         startAi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intentMain = new Intent(GameMenu.this,
-                        Main2Activity.class);
+                        PlayerVsAIActivity.class);
+                GameMenu.this.startActivity(intentMain);
+            }
+        });
+
+        startPvP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentMain = new Intent(GameMenu.this,
+                        PlayerVsPlayerActivity.class);
                 GameMenu.this.startActivity(intentMain);
             }
         });
