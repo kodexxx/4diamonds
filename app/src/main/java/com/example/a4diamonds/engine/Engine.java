@@ -1,6 +1,6 @@
 package com.example.a4diamonds.engine;
 
-import com.example.a4diamonds.engine.entities.PlayerScoreEntity;
+import com.example.a4diamonds.entities.PlayerScoreEntity;
 
 import java.util.ArrayList;
 import java.util.HashMap;

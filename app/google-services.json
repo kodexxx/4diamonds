@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "642832198403",
+    "firebase_url": "https://four-diamonds.firebaseio.com",
+    "project_id": "four-diamonds",
+    "storage_bucket": "four-diamonds.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642832198403:android:4ebd6b82ad74b071",
+        "android_client_info": {
+          "package_name": "com.example.a4diamonds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642832198403-6ktq1rus8gjdjaah4kkpcb385tpl83qu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-4SaB485LOcu5x0d_byS-moI-SBT6l8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642832198403-6ktq1rus8gjdjaah4kkpcb385tpl83qu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

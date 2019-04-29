@@ -1,4 +1,4 @@
-package com.example.a4diamonds.engine.entities;
+package com.example.a4diamonds.entities;
 
 import lombok.Getter;
 import lombok.Setter;

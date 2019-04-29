@@ -18,8 +18,8 @@ public class Triangle90Condition implements ICondition {
     @Override
     public List<Pair<Integer, Integer>> getStep() {
         return new ArrayList<Pair<Integer, Integer>>() {{
-            add(new Pair<>(1, 0));
             add(new Pair<>(0, 1));
+            add(new Pair<>(1, 0));
             add(new Pair<>(1, 2));
         }};
     }

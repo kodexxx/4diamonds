@@ -1,4 +1,4 @@
-package com.example.a4diamonds;
+package com.example.a4diamonds.activities;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import com.example.a4diamonds.FieldAdapter;
+import com.example.a4diamonds.R;
 import com.example.a4diamonds.engine.AI;
 import com.example.a4diamonds.engine.ChangeScoreCallback;
 import com.example.a4diamonds.engine.Engine;
