@@ -1,11 +1,13 @@
 package com.example.a4diamonds;
 
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.a4diamonds.engine.ChangeScoreCallback;
@@ -32,11 +34,11 @@ public class PlayerVsPlayerActivity extends AppCompatActivity {
         final TextView scoreRed = findViewById(R.id.scoreBlue);
         final TextView scoreBlue = findViewById(R.id.scoreRed);
 
-        final TextView nowStep = findViewById(R.id.now_step);
 
         final int[] nowStepIndex = {-1};
 
-        nowStep.setText("Now step: Red");
+        this.changeActiveDiamond(Engine.RED_DIAMOND);
+
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -44,7 +46,8 @@ public class PlayerVsPlayerActivity extends AppCompatActivity {
                 int x = position / 10;
                 int y = position % 10;
 
-                nowStep.setText("Now step: " + (nowStepIndex[0] == 1 ? "Red" : "Blue"));
+                changeActiveDiamond((nowStepIndex[0] == 1 ? Engine.RED_DIAMOND : Engine.BLUE_DIAMOND));
+
                 nowStepIndex[0] *= -1;
 
                 service.submit(new Runnable() {
@@ -60,8 +63,8 @@ public class PlayerVsPlayerActivity extends AppCompatActivity {
                 adapter.updateResults(engine.getField());
 
 
-                scoreRed.setText(String.format("Red: %d", engine.getScoreRed().getScore()));
-                scoreBlue.setText(String.format("Blue: %d", engine.getScoreBlue().getScore()));
+                scoreRed.setText(String.format("%d", engine.getScoreRed().getScore()));
+                scoreBlue.setText(String.format("%d", engine.getScoreBlue().getScore()));
             }
         });
 
@@ -87,5 +90,17 @@ public class PlayerVsPlayerActivity extends AppCompatActivity {
         gridView.setNumColumns(10);
 
         gridView.setAdapter(adapter);
+    }
+
+    private void changeActiveDiamond(int type) {
+        ImageView red = findViewById(R.id.blue_diamond_image);
+        ImageView blue = findViewById(R.id.red_diamond_image);
+        if (type == Engine.RED_DIAMOND) {
+            red.setAlpha((float) 0.3);
+            blue.setAlpha((float) 1);
+        } else {
+            red.setAlpha((float) 1);
+            blue.setAlpha((float) 0.3);
+        }
     }
 }
