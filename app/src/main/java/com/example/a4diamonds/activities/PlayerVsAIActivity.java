@@ -14,6 +14,9 @@ import com.example.a4diamonds.R;
 import com.example.a4diamonds.engine.AI;
 import com.example.a4diamonds.engine.ChangeScoreCallback;
 import com.example.a4diamonds.engine.Engine;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -29,6 +32,12 @@ public class PlayerVsAIActivity extends AppCompatActivity {
 
         final Engine engine = new Engine(10);
         final AI ai = new AI();
+
+        MobileAds.initialize(this, "ca-app-pub-9872381039639818~5107327306");
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         final FieldAdapter adapter = new FieldAdapter(this, engine.getField());
 

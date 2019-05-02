@@ -9,6 +9,9 @@
         android:roundIcon="@drawable/red_diamond"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9872381039639818~5107327306"/>
         <activity android:name=".GameMenu" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

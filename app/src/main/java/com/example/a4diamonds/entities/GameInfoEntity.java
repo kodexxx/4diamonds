@@ -1,5 +1,8 @@
 package com.example.a4diamonds.entities;
 
+import java.util.Date;
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,5 +11,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class GameInfoEntity {
-    String name;
+    Boolean playerRedReady;
+    Boolean playerBlueReady;
+    Date createdAt;
+    List<StepEntity> steps;
 }
