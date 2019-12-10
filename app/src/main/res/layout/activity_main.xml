@@ -18,6 +18,21 @@
             android:text="Create Game"
             android:id="@+id/create_game_button"/>
 
+        <EditText
+            android:id="@+id/gameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:inputType="textPersonName"
+            android:hint="GameId" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:id="@+id/connectToGame"/>
+
         <ListView
             android:id="@+id/games"
             android:layout_width="match_parent"

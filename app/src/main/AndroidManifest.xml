@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".activities.PlayerVsPlayerActivity" android:screenOrientation="portrait"/>
         <activity android:name=".activities.PlayerVsPlayerFirebaseActivity" />
+        <activity android:name=".activities.PlayerVsPlayerFirebaseGameActivity" />
 
     </application>
 

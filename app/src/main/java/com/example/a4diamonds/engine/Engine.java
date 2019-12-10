@@ -56,6 +56,12 @@ public class Engine {
         this.processSituation();
     }
 
+    public void setDiamond(int x, int y, int color) {
+        field.get(x).set(y, color);
+
+        this.processSituation();
+    }
+
     public List<ArrayList<Integer>> getField() {
         return this.field;
     }
